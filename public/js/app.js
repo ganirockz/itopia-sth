@@ -1,6 +1,27 @@
-$('#modal1').openModal();
+angular.module('itopia', ['ui.router'])
+.config(function($stateProvider, $urlRouterProvider) {
+  //
+  // For any unmatched url, redirect to /state1
+  $urlRouterProvider.otherwise("/state1");
+  //
+  // Now set up the states
+  $stateProvider
+    .state('login', {
+      url: "login",
+      templateUrl: "views/login.html",
+      controller : 'loginCtrl'
+    })
+    .state('posts', {
+      url: "/posts",
+      templateUrl: "views/posts.html",
+      controller: 'postsCtrl'
+    })
 
-angular.module('itopia', [ ])
+
+})
+.run(function ($state) {
+  $state.transitionTo('login');
+})
 .controller('appctrl', ['$scope', '$http', function ($scope, $http) {
   //console.log('hello world!');
   var now = moment();
@@ -15,5 +36,11 @@ angular.module('itopia', [ ])
       $scope.posts = res;
     })
   }
-  }]);
+  }])
+  .controller('loginCtrl', ['$scope', '$http', function ($scope, $http) {
+    console.log('in login view');
+  }])
+  .controller('posts', ['$scope', '$http', function ($scope, $http) {
+    console.log('in posts view');
+  }])
 ;
