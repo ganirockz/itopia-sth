@@ -1,0 +1,135 @@
+body, html, banner-bg {
+	/* important */
+	height: 100%;
+}
+
+.banner-bg{
+	background:url(../images/bg.jpg) no-repeat;
+	background-size:cover;
+  background-attachment:fixed;
+	height:100%;
+  width:100%;
+  overflow:scroll;
+}
+
+.nav-wrapper{
+  background:#17a086;
+  height:75px;
+}
+
+.brand-logo{
+  margin-top:10px;
+}
+
+.nav-menu{
+  margin-top:12px;
+}
+
+.card-image{
+	position:relative;
+}
+
+.card-button{
+	position:absolute;
+	bottom:43px;
+	left:0;
+	right:0;
+	width:386px;
+	margin:auto;
+}
+
+.left-block {
+	width: 120px;
+	height: 120px;
+	margin:10px 0 10px 10px;
+	bottom:0;
+	top:0;
+	left:0;
+	float:left;
+	overflow:hidden;
+	position:relative}
+
+
+	.left-block img{
+		width:150px;
+	}
+
+	.right-block {
+		width: 770px;
+		height: 120px;
+		top:0;
+		bottom:0;
+		right:0;
+		float:right;
+		margin:10px 10px 10px 0;
+		}
+
+		.right-block-top {
+			width: 770px;
+			height: 30px;
+			top:0;
+			right:0;
+			}
+
+			.location-text-box {
+				bottom:0;
+				float:right;
+				margin-top:2px;
+				font-size: 18px;
+				margin-right:10px;
+				}
+
+			.location {
+				width: 24px;
+				height: 30px;
+				float:right;
+				position:relative;
+				margin-right:10px;
+				}
+
+				.time-box {
+					bottom:0;
+					float:right;
+					margin-top:2px;
+					font-size: 18px;
+					margin-right:20px;
+					}
+
+					.time {
+						width: 30px;
+						height: 30px;
+						float:right;
+						margin-right:10px;
+						}
+
+			.right-block-middle {
+				width: 770px;
+				height: 55px;
+				}
+
+				.right-block-bottom {
+					width: 770px;
+					height: 35px;
+					}
+
+					.message_notif-box {
+						top:0;
+						float:left;
+						font-size: 26px;
+						margin-right:5px;
+						margin-left:20px;
+						margin-top:-7px;
+						}
+
+						.message_notif {
+							top:0;
+							width: 26px;
+							height: 26px;
+							float:left;
+							}
+
+							.post_modals {
+								top:0;
+								float:right;
+								margin-right:10px;
+								}
