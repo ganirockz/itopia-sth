@@ -5,9 +5,9 @@ function postsCtrl ($scope, $http, $state) {
   $scope.distance = 0;
   $scope.selectedIndex = 0;
   initialize();
-  if($scope.user.firstname == undefined){
-    $state.transitionTo('login');
-  }
+  // if($scope.user.firstname == undefined){
+  //   $state.transitionTo('login');
+  // }
   function getPosts () {
   $http.get('/posts').success(function (res) {
     $scope.posts = res;
@@ -95,6 +95,9 @@ if (navigator.geolocation) {
 // [END region_geolocation]
 
 $scope.addPost = function (post) {
+post.ts = moment().format('Do ddd hA');
+console.log(post.ts);
+
 
 var address = document.getElementById('address').value;
 post.location = address;
@@ -140,5 +143,12 @@ function callback(response, status) {
 
 }
 }//end get distance
+
+$scope.getTime = function (ts, id) {
+  console.log(ts);
+  var timeago = moment(ts).fromNow();
+  $('.time-box').append('<span class="time-text black-text">'+timeago+'</span>');
+  console.log(timeago);
+}
 
 }

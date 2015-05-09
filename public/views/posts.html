@@ -25,134 +25,39 @@
             </div>
           </div>
           <!--/Main_card-->
-          <!--content_card-->
-          <div class="card-post large" ng-repeat="post in posts" ng-click="postDetail($index);getDistance(user.pos, post.pos)" style="cursor:pointer">
-            <div class="card white">
-              <!--left-block-->
-              <div class="left-block">
-                <img src="images/bicycle.jpg">
-                </div>
-                <!--/left-block-->
-                <!--right-block-->
-                <div class="right-block">
-                  <div class="right-block-top">
-                    <span class="card-title black-text">{{post.title}}</span>
-                    <div class="location-text-box" >
-                    <span class="location-text black-text"></span>
-                  </div>
-                    <div class="location">
-                      <img src="images/location.png">
-                  </div>
-                    <div class="time-box">
-                      <span class="time-text black-text">55Min ago</span>
-                  </div>
-                    <div class="time">
-                      <img src="images/time.png">
-                    </div>
-                    <div class="right-block-middle black-text">
-                      <span class="card-description black-text">{{post.description}}</span>
-                    </div>
-                    <div class="right-block-bottom">
-                      <div class="message_notif-box">
-                        <span class="message_notif-text grey-text">23</span>
-                      </div>
-                      <div class="message_notif">
-                        <img src="images/message_notif.png">
-                      </div>
-                      <div class="post_modals">
-                    <img src="images/pop_out_green.png">
-                </div>
-                </div>
-                  </div>
-                  </div>
-                  <!--right-block-->
+          <div class="card small" ng-repeat="post in posts" ng-click="getDistance(user.pos, post.pos)">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="images/bicycle.jpg">
               </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">{{post.title}}<i class="mdi-navigation-more-vert right"></i></span>
+                <div class="time-box">
+                  <span class="time-text black-text">{{post.ts}}</span>
+              </div>
+                <div class="time">
+                  <img src="images/time.png">
+                </div>
+                <p>{{post.description}}</p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">{{post.title}} <i class="mdi-navigation-close right"></i></span>
+                <p>{{post.description}}</p>
+                <div class="location-text-box">
+                       <span class="location-text black-text">200M</span>
+                     </div>
+                       <div class="location">
+                         <img src="images/location.png">
+
+              </div>
+
             </div>
-          <!--/content_card-->
         </div>
       </div>
 
   </div>
 
   <!--Body Container-->
-  <div id="post-detail" class="modal">
-  <div class="card large">
-    <div class="modal-top-block">
-      <div class="modal-topleft-block">
-        <img src="images/cry.jpg">
-      </div>
-        <div class="modal-topright-block">
-          <div class="right-block-top">
-            <span class="card-title white-text">{{posts[selectedIndex].title}}</span>
-            <div class="location-text-box" ng-hide="distance == 0">
-            <span class="location-text white-text">{{distance}}</span>
-          </div>
-            <div class="location">
-              <img src="images/location.png">
-          </div>
-            <div class="time-box">
-              <span class="time-text white-text">55Min ago</span>
-          </div>
-            <div class="time">
-              <img src="images/time.png">
-            </div>
-            <div class="right-block-middle">
-              <span class="card-description white-text">Shared publicly.</span>
-            </div>
-            <div class="right-block-bottom">
-              <div class="message_notif-box">
-                <span class="message_notif-text grey-text">23</span>
-              </div>
-              <div class="message_notif">
-                <img src="images/message_notif.png">
-              </div>
-              <div class="post_modals">
-            <img src="images/pop_out_green.png">
-        </div>
-        </div>
-          </div>
-        </div>
-    </div>
-    <div class="modal-middle-block">
-      <div class="modal-header">
-        <span class="card-title black-text">{{posts[selectedIndex].title}}</span>
-      </div>
-      <div class="modal-description">
-        <span class="card-description black-text">{{posts[selectedIndex].description}}</span>
-      </div>
-      <div class="post-image">
-        <img src="images/display_image.jpg">
-      </div>
-    </div>
-    <div class="modal-bottom-block">
-      <div class="modal-comment-field">
-        <div class="modal-comment-icon">
-          <img src="images/write_icon.png">
-        </div>
-      </div>
-      <div class="modal-bottom-count">
-        <div class="modal-bottom-countleft">
-          <div class="mbcl-image">
-            <img src="images/mbc_image.png">
-          </div>
-        </div>
-        <div class="modal-bottom-countright">
-          <div class="mbcr-image">
-            <img src="images/mbc_image.png">
-          </div>
-        </div>
-      </div>
-      <div class="modal-bottom-buttons">
-        <div class="modal-participate-button">
-          <img src="images/participate_button.png">
-      </div>
-      <div class="modal-donate-button">
-        <img src="images/donate_button.png">
-    </div>
-    </div>
-</div>
-</div>
-</div><!--modal post detail -->
+
 
 <div id="add-post" class="modal">
     <div class="modal-content">
