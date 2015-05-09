@@ -2,7 +2,7 @@ angular.module('itopia', ['ui.router'])
 .config(function($stateProvider, $urlRouterProvider) {
   //
   // For any unmatched url, redirect to /state1
-  $urlRouterProvider.otherwise("/state1");
+  $urlRouterProvider.otherwise("/login");
   //
   // Now set up the states
   $stateProvider
@@ -24,10 +24,10 @@ angular.module('itopia', ['ui.router'])
 })
 .controller('appctrl', ['$scope', '$http', function ($scope, $http) {
   //console.log('hello world!');
+  $scope.view = 'app';
   var now = moment();
-  $http.get('/itopia').success(function (res) {
-    $scope.posts = res;
-  });
+  $scope.user = {};
+
 
   $scope.addPost = function (post) {
     //console.log(post);
@@ -37,10 +37,42 @@ angular.module('itopia', ['ui.router'])
     })
   }
   }])
-  .controller('loginCtrl', ['$scope', '$http', function ($scope, $http) {
+  .controller('loginCtrl', ['$scope', '$http', '$state', function ($scope, $http, $state) {
     console.log('in login view');
+    $scope.view = 'login';
+
+    $scope.signUpModel = function () {
+      $('#modal1').openModal();
+    }
+
+    $scope.loginModel = function () {
+      $('#modal2').openModal();
+    }
+
+    $scope.signUp = function (newuser) {
+      console.log(newuser);
+      $http.post('/signup', newuser).success(function (res) {
+        console.log(res);
+        $scope.$parent.user = res;
+        $state.transitionTo('posts');
+      })
+    }
+    $scope.login = function (user) {
+      $http.post('/login', user).success(function (res) {
+        console.log(res);
+        if(res[0]){
+          $scope.$parent.user = res[0];
+          $state.transitionTo('posts');
+        }
+      })
+    }
   }])
-  .controller('posts', ['$scope', '$http', function ($scope, $http) {
-    console.log('in posts view');
+  .controller('postsCtrl', ['$scope', '$http', '$state', function ($scope, $http, $state) {
+    console.log('in posts view'+$scope.user);
+    console.log($scope.user.firstname);
+    if($scope.user.firstname == undefined){
+      $state.transitionTo('login');
+    }
+    $scope.view = 'posts';
   }])
 ;

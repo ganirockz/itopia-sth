@@ -1,1 +1,70 @@
-<h1>login view</h1>
+<div class="login-page container-fluid">
+ <img class="login-bg" src="images/home.jpg"/>
+ <!-- Modal Trigger -->
+   <a class="waves-effect waves-light btn modal-trigger red darken-4 signup-btn" ng-click="signUpModel()">Sign up</a>
+   <a class="waves-effect waves-light btn modal-trigger login-btn" ng-click="loginModel()">login</a>
+
+   <!-- Modal Structure -->
+   <div id="modal1" class="modal">
+     <div class="modal-content">
+       <h4>Sign up</h4>
+       <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <input ng-model="newuser.firstname" id="first_name" type="text" class="validate">
+                <label for="first_name">First Name</label>
+              </div>
+              <div class="input-field col s6">
+                <input ng-model="newuser.lastname" id="last_name" type="text" class="validate">
+                <label for="last_name">Last Name</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input ng-model="newuser.email" id="email" type="email" class="validate">
+                <label for="email">Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input ng-model="newuser.password" id="password" type="password" class="validate">
+                <label for="password">Password</label>
+              </div>
+            </div>
+          </form>
+        </div>
+     </div>
+     <div class="modal-footer">
+       <a ng-click="signUp(newuser)" class=" modal-action modal-close waves-effect waves-green btn-flat">sign up</a>
+     </div>
+   </div>
+
+   <div id="modal2" class="modal">
+     <div class="modal-content">
+       <h4>Login</h4>
+       <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s12">
+                <input ng-model="user.email" id="email" type="email" class="validate">
+                <label for="email">Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input ng-model="user.password" id="password" type="password" class="validate">
+                <label for="password">Password</label>
+              </div>
+            </div>
+          </form>
+        </div>
+     </div>
+     <div class="modal-footer">
+       <a ng-click="login(user)" class=" modal-action modal-close waves-effect waves-green btn-flat">Login</a>
+     </div>
+   </div>
+
+
+
+</div>

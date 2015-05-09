@@ -1,24 +1,40 @@
 var express = require('express');
 var app = express();
 var mongojs = require('mongojs');
-var db = mongojs('itopiaDB', ['itopiaDB']);
+var dbu = mongojs('itopia', ['users']);
+var dbp = mongojs('itopia', ['posts']);
 var bodyParser = require('body-parser');
 
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json())
-app.get('/itopia', function (req, res){
-  console.log('request recieved');
-  db.itopiaDB.find(function (err, docs) {
-    console.log(docs);
+// app.get('/itopia', function (req, res){
+//   console.log('request recieved');
+//   db.itopia.find(function (err, docs) {
+//     console.log(docs);
+//     res.json(docs);
+//   });
+// });
+//
+// app.post('/itopia', function (req, res){
+//     //console.log(req.body);
+//     db.posts.insert(req.body, function(err, docs){
+//       res.json(docs);
+//     });
+// });
+
+app.post('/signup', function (req, res) {
+  dbu.users.insert(req.body, function(err, docs){
     res.json(docs);
-  });
+  })
 });
 
-app.post('/itopia', function (req, res){
-    //console.log(req.body);
-    db.itopiaDB.insert(req.body, function(err, docs){
-      res.json(docs);
+app.post('/login', function (req, res) {
+    console.log(req.body);
+    dbu.users.find(req.body).toArray(function(err, results){
+    console.log(results); // output all records
+    res.json(results);
     });
+
 });
 
 

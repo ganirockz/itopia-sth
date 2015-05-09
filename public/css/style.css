@@ -133,3 +133,32 @@ body, html, banner-bg {
 								float:right;
 								margin-right:10px;
 								}
+
+				.login-page{
+					height:100%;
+					width:100%;
+					background:#999;
+					display:inline-block;
+				}
+
+				.login-page img{
+					position:absolute;
+					top:0;
+					bottom:0;
+					left:0;
+					right:0;
+					width: 1280px;
+					margin:auto;
+				}
+
+				.signup-btn{
+					position:absolute;
+					bottom:300px;
+					left:550px;
+				}
+
+				.login-btn{
+					position:absolute;
+					bottom:300px;
+					left:450px;
+				}
