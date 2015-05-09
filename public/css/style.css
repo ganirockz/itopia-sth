@@ -7,7 +7,7 @@ body, html, banner-bg {
 	background:url(../images/bg.jpg) no-repeat;
 	background-size:cover;
   background-attachment:fixed;
-	height:100%;
+	height:1000px;
   width:100%;
   overflow:scroll;
 }
@@ -161,4 +161,207 @@ body, html, banner-bg {
 					position:absolute;
 					bottom:300px;
 					left:450px;
+				}
+
+
+
+				.modal-top-block{
+				  height:120px;
+				  width:630px;
+				  background-color:#17a086;
+				}
+
+				.modal-topleft-block{
+				  border-radius: 5px;
+				  height:100px;
+				  width:100px;
+				  margin:10px;
+				  overflow:hidden;
+				  float:left;
+				  top:0;
+				  bottom:0;
+				}
+
+				.modal-topleft-block img{
+				  width:140px;
+				}
+
+				.modal-topright-block{
+				  height:100px;
+				  width:500px;
+				  margin:10px 10px 10px 0;
+				  float:right;
+				  overflow:hidden;
+				  top:0;
+				  bottom:0;
+				}
+				.right-block-top {
+							width: 500px;
+							height: 30px;
+							top:0;
+							right:0;
+							}
+
+							.location-text-box {
+								bottom:0;
+								float:right;
+								margin-top:2px;
+								font-size: 18px;
+								margin-right:10px;
+								}
+
+							.location {
+								width: 24px;
+								height: 30px;
+								float:right;
+								position:relative;
+								margin-right:10px;
+								}
+
+								.time-box {
+									bottom:0;
+									float:right;
+									margin-top:2px;
+									font-size: 18px;
+									margin-right:20px;
+									}
+
+									.time {
+										width: 30px;
+										height: 30px;
+										float:right;
+										margin-right:10px;
+										}
+
+							.right-block-middle {
+								width: 770px;
+								height: 55px;
+								}
+
+								.right-block-bottom {
+									width: 770px;
+									height: 35px;
+									}
+
+									.message_notif-box {
+										top:0;
+										float:left;
+										font-size: 26px;
+										margin-right:5px;
+										margin-left:20px;
+										margin-top:-7px;
+										}
+
+										.message_notif {
+											top:0;
+											width: 26px;
+											height: 26px;
+											float:left;
+											}
+
+				.modal-middle-block{
+				  border-top: 1px solid rgba(160, 160, 160, 0.4);
+				  height:420px;
+				  width:630px;
+				  background-color:#ffffff;
+				}
+
+				.modal-header{
+				  height:30px;
+				  width:630px;
+				  margin:0 0 0 10px;
+				  float:left;
+				}
+
+				.modal-description{
+				  height:35px;
+				  width:630px;
+				  margin:0 0 0 10px;
+				  font-size: 18px;
+				  float:left;
+				}
+
+				.post-image{
+				  height:340px;
+				  width:610px;
+				  margin:0 0 0 10px;
+				  overflow:hidden;
+				  float:left;
+				}
+
+				.post-image img{
+				  width:630px;
+				}
+
+				.modal-bottom-block{
+				  border-top: 1px solid rgba(160, 160, 160, 0.4);
+				  background-color:#f1f1f1;
+				  width:630px;
+				  height:190px;
+				}
+
+				.modal-comment-field{
+				  border-radius: 5px;
+				  border: 1px solid rgba(160, 160, 160, 0.4);
+				  background-color:#ffffff;
+				  width:590px;
+				  height:60px;
+				  margin:20px 0 0 20px;
+				}
+
+				.modal-comment-icon{
+				  width:30px;
+				  height:30px;
+				  margin:14px 14px 14px 0;
+				  float:right;
+				}
+
+				.modal-bottom-count{
+				  width:590px;
+				  height:50px;
+				  margin:0 0 0 20px;
+				}
+
+				.modal-bottom-countleft{
+				  width:257px;
+				  height:50px;
+				  float:left;
+				}
+
+				.mbcl-image{
+				  width:40px;
+				  height:40px;
+				  margin:5px 0 5px 0;
+				  float:left;
+				}
+
+				.modal-bottom-countright{
+				  width:257px;
+				  height:50px;
+				  float:right;
+				}
+
+				.mbcr-image{
+				  width:40px;
+				  height:40px;
+				  margin:5px 0 5px 0;
+				  float:left;
+				}
+
+				.modal-bottom-buttons{
+				  width:590px;
+				  height:40px;
+				  margin:0 0 0 20px;
+				}
+
+				.modal-participate-button{
+				  width:257px;
+				  height:40px;
+				  float:left;
+				}
+
+				.modal-donate-button{
+				  width:257px;
+				  height:40px;
+				  float:right;
 				}

@@ -70,9 +70,20 @@ angular.module('itopia', ['ui.router'])
   .controller('postsCtrl', ['$scope', '$http', '$state', function ($scope, $http, $state) {
     console.log('in posts view'+$scope.user);
     console.log($scope.user.firstname);
+    $scope.view = 'posts';
+
     if($scope.user.firstname == undefined){
       $state.transitionTo('login');
     }
-    $scope.view = 'posts';
+
+    $http.get('/posts').success(function (res) {
+      $scope.posts = res;
+      console.log($scope.posts);
+    });
+
+    $scope.postDetail = function () {
+      $('#post-detail').openModal();
+    }
+
   }])
 ;

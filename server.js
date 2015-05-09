@@ -7,13 +7,14 @@ var bodyParser = require('body-parser');
 
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json())
-// app.get('/itopia', function (req, res){
-//   console.log('request recieved');
-//   db.itopia.find(function (err, docs) {
-//     console.log(docs);
-//     res.json(docs);
-//   });
-// });
+
+app.get('/posts', function (req, res){
+  console.log('request recieved');
+  dbp.posts.find(function (err, docs) {
+    console.log(docs);
+    res.json(docs);
+  });
+});
 //
 // app.post('/itopia', function (req, res){
 //     //console.log(req.body);
