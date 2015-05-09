@@ -15,13 +15,13 @@ app.get('/posts', function (req, res){
     res.json(docs);
   });
 });
-//
-// app.post('/itopia', function (req, res){
-//     //console.log(req.body);
-//     db.posts.insert(req.body, function(err, docs){
-//       res.json(docs);
-//     });
-// });
+
+app.post('/posts', function (req, res){
+    //console.log(req.body);
+    dbp.posts.insert(req.body, function(err, docs){
+      res.json(docs);
+    });
+});
 
 app.post('/signup', function (req, res) {
   dbu.users.insert(req.body, function(err, docs){

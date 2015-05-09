@@ -2,7 +2,9 @@ body, html, banner-bg {
 	/* important */
 	height: 100%;
 }
-
+.pac-container{
+	z-index:1999;
+}
 .banner-bg{
 	background:url(../images/bg.jpg) no-repeat;
 	background-size:cover;
@@ -152,17 +154,20 @@ body, html, banner-bg {
 				}
 
 				.signup-btn{
-					position:absolute;
-					bottom:300px;
-					left:550px;
+					float:right;
+					margin-left:35px;
 				}
 
 				.login-btn{
-					position:absolute;
-					bottom:300px;
-					left:450px;
+					float:left;
+					margin-left:35px;
 				}
 
+				.login-btns{
+					position:absolute;
+					bottom:30%;
+					left:40%;
+				}
 
 
 				.modal-top-block{
