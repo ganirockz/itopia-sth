@@ -14,52 +14,7 @@ body, html, banner-bg {
   overflow:scroll;
 }
 
-/*.card.popup {
-  position: relative;
-  overflow: hidden;
-  margin: 0.5rem 0 1rem 0;
-  background-color: #fff;
-  border-radius: 2px; }
-  .card.popup .card.popup-title {
-    color: #fff;
-    font-size: 24px;
-    font-weight: 480; }
-    .card.popup .card.popup-description {
-      color: #fff;
-      font-size: 20px;
-      font-weight: 300; }
-    .card.popup .card.popup-description.activator {
-      cursor: pointer; }
-  .card.popup.small, .card.popup.medium, .card.popup.large .card.popup-post.large{
-    position: relative; }
-    .card.popup.small .card.popup-image, .card.popup.medium .card.popup-image, .card.popup.large .card.popup-post.large .card.popup-image {
-      overflow: hidden; }
-    .card.popup.small .card.popup-content, .card.popup.medium .card.popup-content, .card.popup.large .card.popup-post.large .card.popup-content {
-      overflow: hidden; }
-    .card.popup.small .card.popup-action, .card.popup.medium .card.popup-action, .card.popup.large .card.popup-post.large .card.popup-action {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0; }
-  .card.popup.small {
-    height: 300px; }
-    .card.popup.small .card.popup-image {
-      height: 150px; }
-    .card.popup.small .card.popup-content {
-      height: 150px; }
-  .card.popup.medium {
-    height: 400px; }
-    .card.popup.medium .card.popup-image {
-      height: 250px; }
-    .card.popup.medium .card.popup-content {
-      height: 150px; }
-  .card.popup.large {
-    width: 630px;
-    height: 700px;}
-    .card.popup.large .card.popup-image {
-      height: 223px; }
-    .card.popup.large .card.popup-content {
-      height: 60px; }*/
+
 
 .nav-wrapper{
   background:#17a086;
@@ -417,3 +372,8 @@ body, html, banner-bg {
 				  height:40px;
 				  float:right;
 				}
+
+			.requests{
+				background:#ccc;
+				padding:4px;
+			}

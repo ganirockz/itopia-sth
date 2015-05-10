@@ -5,9 +5,9 @@ function postsCtrl ($scope, $http, $state) {
   $scope.distance = 0;
   $scope.selectedIndex = 0;
   initialize();
-  // if($scope.user.firstname == undefined){
-  //   $state.transitionTo('login');
-  // }
+  if($scope.user.firstname == undefined){
+    $state.transitionTo('login');
+  }
   function getPosts () {
   $http.get('/posts').success(function (res) {
     $scope.posts = res;
@@ -149,6 +149,33 @@ $scope.getTime = function (ts, id) {
   var timeago = moment(ts).fromNow();
   $('.time-box').append('<span class="time-text black-text">'+timeago+'</span>');
   console.log(timeago);
+}
+
+$scope.addRequest = function (id, request) {
+  var reqobj = {
+    postId : id,
+    req : request,
+    user : $scope.user.email
+  }
+  $http.post('/sendrequest', reqobj).success(function (res) {
+    console.log(res);
+    $('.type-request').hide();
+  });
+}
+
+$scope.getRequest = function () {
+  $http.get('/getrequests').success(function (res) {
+    $scope.requests = res;
+    console.log($scope.requests);
+  })
+}
+
+$scope.selectRequest = function (uEmail) {
+  console.log(uEmail);
+
+  $http.post('/selectReq', {email:uEmail}).success(function (res) {
+    console.log(res);
+  })
 }
 
 }
